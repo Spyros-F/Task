@@ -1,5 +1,3 @@
-// // app.js
-
 const Koa = require('koa');
 const koaBody = require('koa-body');
 
@@ -9,13 +7,10 @@ const app = new Koa();
 // middleware functions
 app.use(koaBody());
 
-// Require the Router we defined in books.js
 let address = require('./address.js');
 
-// Use the Router on the sub route /books
+// Use the Router on the sub route /address
 app.use(address.routes());
-
-// use the router here
 
 app.listen(8080);
 
